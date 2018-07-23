@@ -39,7 +39,6 @@ Reach us through LinkedIn:
 
 -   [Cesar Castrejon](https://www.linkedin.com/in/cesar-castrejon-927164118/)
 -   [Clifford Ferraren](https://www.linkedin.com/in/clifford-ferraren/)
--   [Sean Yu](https://www.linkedin.com/in/sean-yu-733205a6/)
 -   [Tsering Sherpa](https://www.linkedin.com/in/tsering-sherpa-1171a7b4/)
 
 ## Background
