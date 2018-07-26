@@ -1,87 +1,84 @@
-[![Build Status](https://travis-ci.org/penny4860/Yolo-digit-detector.svg?branch=master)](https://travis-ci.org/penny4860/Yolo-digit-detector) [![codecov](https://codecov.io/gh/penny4860/Yolo-digit-detector/branch/master/graph/badge.svg)](https://codecov.io/gh/penny4860/Yolo-digit-detector)
+# **Problem Statement :**
+- ### `To extract  the registration number of a car entering inside a parking lot.`
 
-# SVHN yolo-v2 digit detector
+# **Softwares and Technology used :**
+- OpenCV 3
+- PIL
+- Python 3
+- Tensor Flow
+- MongoDB
+- Anaconda package manager
 
-I have implemented a digit detector that applies yolo-v2 to svhn dataset.
+# Refer to "How to run the program.txt" for instructions on running the code.
 
-<img src="images/svhn.png" height="600">
+# INITIAL BACKGROUND
 
-## Usage for python code
-
-#### 0. Requirement
-
-* python 3.5
-* anaconda 4.4.0
-* tensorflow 1.2.1
-* keras 2.1.1
-* opencv 3.3.0
-* imgaug
-* Etc.
-
-I recommend that you create and use an anaconda env that is independent of your project. You can create anaconda env for this project by following these simple steps. This process has been verified on Windows 10 and ubuntu 16.04.
-
-```
-$ conda create -n yolo python=3.5 anaconda=4.4.0
-$ activate yolo # in linux "source activate yolo"
-(yolo) $ pip install tensorflow==1.2.1
-(yolo) $ pip install keras==2.1.1
-(yolo) $ pip install opencv-python
-(yolo) $ pip install imgaug
-(yolo) $ pip install pytest-cov
-(yolo) $ pip install codecov
-(yolo) $ pip install -e .
-```
-
-### 1. Digit Detection using pretrained weight file
-
-In this project, the pretrained weight file is stored in [weights.h5](https://drive.google.com/drive/folders/1Lg3eAPC39G9GwVTCH3XzF73Eok-N-dER).
-
-* Example code for predicting a digit region in a natural image is described in [detection_example.ipynb](https://github.com/penny4860/Yolo-digit-detector/blob/master/detection_example.ipynb).
-* Training set evaluation (1000-images) is as follows:
-  * fscore / precision / recall: 0.799, 0.791, 0.807
+- ANPR is an image-processing innovation which is used to perceive vehicles by their tags. This expertise is ahead of time ubiquity in security and traffic installation. Tag Recognition System is an application of PC vision. PC vision is a technique for using a PC to take out abnormal state information from a digital image. The useless homogeny among various tags for example, its dimension and the outline of the License Plate. The ALPR system consists of following steps:-
+  - Vehicle image capture.
+  - Preprocessing.
+  - Number plate extraction.
+  - Character segmentation.
+  - Character recognition.
 
 
-### 2. Training from scratch
-
-This project provides a way to train digit detector from scratch. If you follow the command below, you can build a digit detector with just two images.
 
 
-* First, train all layers through the following command. 
-  * `` project/root> python train.py -c configs/from_scratch.json ``
-* Next, fine tune only the last layer through the following command. 
-  * `` project/root> python train.py -c configs/from_scratch2.json ``
-* Finally, evaluate trained digit detector.
-  * `` project/root> python evaluate.py -c configs/from_scratch.json -w svhn/weights.h5 ``
-  * The evaluation results are output in the following manner.
-  	* ``{'fscore': 1.0, 'precision': 1.0, 'recall': 1.0}``
-  * The prediction result images are saved in the ``project/detected`` directory.
 
-<img src="images/1.png" height="150">
-<img src="images/2.png" height="150">
+- The ALPR system works in these strides, the initial step is the location of the vehicle and capturing a vehicle image of front or back perspective of the vehicle, the second step is the localization of Number Plate and then extraction of vehicle Number Plate is an image. The final stride use image segmentation strategy, for the segmentation a few techniques neural network, mathematical morphology, color analysis and histogram analysis. Segmentation is for individual character recognition. Optical Character Recognition (OCR) is one of the strategies to perceive the every character with the assistance of database stored for separate alphanumeric character.
 
-Now you can add more images to train a digit detector with good generalization performance.
+# TESTING REPORT
 
-### 3. SVHN dataset in Pascal Voc annotation format
+- Let  ‘correct’  =  (number of license plates correctly detected)
+	Let  ‘total images’ = total number of license plates.
 
-In this project, I use [pascal voc format](http://host.robots.ox.ac.uk/pascal/VOC/) as annotation information to train object detector.
-An annotation file of this format can be downloaded from [svhn-voc-annotation-format](https://github.com/penny4860/svhn-voc-annotation-format).
+	Total images = 480
 
+	Accuracy = (correct * 100) / Total images
+- Avg. image time = (total time)/Total images
+- All testing is done on  Processor: Inter(R) Core(TM)
+i5 -6200 CPU @ 2.30 Ghz
+Memory: 8GB DDR - 4
+- CNN Classifier is trained on GPU: Nvidia GeForce GTX 960
+Graphics Memory : 4 GB
+Processor: Inter(R) Core(TM)  i7 -4710 HQ CPU @ 3.2 Ghz
+Memory : 8 GBDDR-4
 
-## Other Results
+# **Approach used and Implemented :**
 
-### 1. Raccoon dataset : https://github.com/experiencor/raccoon_dataset
+- In this project we start with the process.py file that asks to input  the name of the video file for which we want the prediction.
+This then breaks the video into frames and stores them in a folder name ‘data’.
+The we run our send each frame to the main.py which will return the predicted image and the cropped license plate from the frame.
+We have displayed a test run on a car image shown below.
 
-<img src="images/raccoon-12.jpg">
+- ## 1) Loading the Image :
+- ## 2) PreProcess the input image :
+  - This step in done in the Preprocess.py file.
+	As most of the opencv function require the input iamge to be in the grayscale and greyscale images are easy for computation so we convert the input image to greyscale.
+- ## 3) Plate detection :
+  - Now we have a grayscale image and a thresholded image. We send them to the DetectPlates.py file. Next we apply the findcountour function of opencv to detection all the boundaries in the thresholded image. This step is to extract the characters from the image so that they can be recognized.
+- ## 4) Character Segmentation :
+	- This phase is done in the DetectChar.py file.
+	Here we start with each possible plates.
+	We crop the plate from input image and resize it to 1.6 times height, 1.6 times width. The we again apply the preprocessing operations on the plate image.
+- ## Character recognition :
+	- This part is done in the train_detect.py file.
+  For the purpose of recognition of the cropped character we use a Trained Convolutional Neural Network classifier.
+  - The classifier is built using the python keras module.
+  - The classifier is trainied with 47605 images constituting images 36 classes ranging from 0-9 and A-Z.
+  - The classifier is tested with 1292 images constituting images 36 classes ranging from 0-9 and A-Z
+  - It takes input 64x64 input image in the first convolution layer.
+  - The Relu activation function in the convolution layer.
+  - The softmax function is used in the final prediction layer.The classifier uses the Root Mean square optimizer with the starting learning rate as 0.001 which gradually decreases by 0.005 after each epoch. We trained the classifier for 5 epoches.
 
-* pretrained weight file is stored at [raccoon](https://drive.google.com/drive/folders/17Co0b5YDNVlWVfuTqygRY_U2qg8FwGmy)
-* training set evaluation (160-images)
-	* fscore / precision / recall: 0.937, 0.963, 0.913
-* test set evaluation (40-images)
-	* fscore / precision / recall: 0.631, 0.75, 0.545
-
-
-## Copyright
-
-* See [LICENSE](LICENSE) for details.
-* This project started at [basic-yolo-keras](https://github.com/experiencor/basic-yolo-keras). I refactored the source code structure of [basic-yolo-keras](https://github.com/experiencor/basic-yolo-keras) and added the CI test. I also applied the SVHN dataset to implement the digit detector. Thanks to the [Huynh Ngoc Anh](https://github.com/experiencor) for providing a good project as open source.
-
+- ## 6.) Prediction :
+	- With this we have the predicted number plate and the cropped image of the number plate from the frame. Next we store the number_plate predicted and the image  in a dictionary with key as the predicted number_plate. If it is already in the dictionary then we increment its count by 1.In the end we predict the number_plate with the maximum frequency as the number on the number plate of the car in the video. We write the cropped image of the number plate in the same directirary with name as video name .jpf.
+- ## 7.) Storing the Results in MongoDB Database :
+  - After we have got the prediction from our main function we then store the Name plate, Cropped image, time of prediction, frequency of the number plate in the dictionary, execution time and name of the video in the pymongo database.
+- ## Application of ALPR :
+  - Automatic license-plate recognition (ALPR) is a technology that uses optical character recognition on images to read vehicle registration plates. It can use existing closed-circuit television, road-rule enforcement cameras, or cameras specifically designed for the task. ALPR can be used by police forces around the world for law enforcement purposes, including to check if a vehicle is registered or licensed. It is also used for electronic toll collection on pay-per-use roads and as a method of cataloguing the movements of traffic, for example by highways agencies.
+  - Automated License Plate Recognition has many uses including:
+    - Recovering stolen cars.
+    - Identifying drivers with an open warrant for arrest.
+    - Catching speeders by comparing the average time it takes to get from stationary camera A to stationary camera B.
+    - Determining what cars do and do not belong in a parking garage.
+    - Expediting parking by eliminating the need for human confirmation of parking passes.
