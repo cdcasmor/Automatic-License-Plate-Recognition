@@ -1,14 +1,18 @@
 # Main.py
 
 import cv2
-import numpy as np
 import os
 import time
+import numpy as np
+import pandas as pd
+from PIL import Image
 import matplotlib.pyplot as plt
 import DetectChars
 import DetectPlates
-from PIL import Image
 import PossiblePlate
+
+
+
 
 # module level variables ##########################################################################
 SCALAR_BLACK = (0.0, 0.0, 0.0)
@@ -112,6 +116,21 @@ def drawRedRectangleAroundPlate(imgOriginalScene, licPlate):
 # end function
 
 ###################################################################################################
+def comparison(saved, detected):
+    plates = []
+    plates = np.append(plates, saved)
+
+    user_data = {'Plate': plates}
+    user_df = pd.DataFrame(data = user_data)	
+
+    for plate in user_df.Plate.unique():
+        if plate == detected:
+            print('Welcome')
+            break
+        else:
+            print('No matches found')
+
+###################################################################################################
 def writeLicensePlateCharsOnImage(imgOriginalScene, licPlate):
     ptCenterOfTextAreaX = 0                             # this will be the center of the area the text will be written to
     ptCenterOfTextAreaY = 0
@@ -165,6 +184,7 @@ if __name__ == "__main__":
     for f in os.listdir():
         y_test,ext = os.path.splitext(f)
         y_pred,_ = main(f)
+        plate_pred = y_pred
         length = length + len(y_test)
         if len(y_test)<len(y_pred):
             y_test = y_test + ' '*(len(y_pred)-len(y_test))
@@ -184,9 +204,12 @@ if __name__ == "__main__":
         accuracy = (score*100)/length
         new = 'Accuarcy at the '+str(i)+' th image '+f+ ' is :'+str(accuracy)
         print(new,'\n','The count is: ',count)
+        saved =  input('please enter the new license plate with capital letters: ')
+        comparison(saved, plate_pred)
         #result.append(result)
         i = i + 1
     print('time taken :',time.time() - start)
+
     #print(result)
     
     #main('plate.jpg')
