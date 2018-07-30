@@ -116,19 +116,17 @@ def drawRedRectangleAroundPlate(imgOriginalScene, licPlate):
 # end function
 
 ###################################################################################################
-def comparison(saved, detected):
-    plates = []
-    plates = np.append(plates, saved)
-
-    user_data = {'Plate': plates}
-    user_df = pd.DataFrame(data = user_data)	
+def comparison(detected):
+   
+    user_df = pd.read_csv('Database.csv')	
 
     for plate in user_df.Plate.unique():
         if plate == detected:
-            print('Welcome')
+            print('Plate matches records! Welcome!')
             break
         else:
             print('No matches found')
+			
 
 ###################################################################################################
 def writeLicensePlateCharsOnImage(imgOriginalScene, licPlate):
@@ -204,14 +202,13 @@ if __name__ == "__main__":
         accuracy = (score*100)/length
         new = 'Accuarcy at the '+str(i)+' th image '+f+ ' is :'+str(accuracy)
         print(new,'\n','The count is: ',count)
-        saved =  input('please enter the new license plate with capital letters: ')
-        comparison(saved, plate_pred)
+        #comparison(plate_pred)
         #result.append(result)
         i = i + 1
     print('time taken :',time.time() - start)
 
     #print(result)
     
-    #main('plate.jpg')
+    #main('Test_car_images_dataset\B58BPS.jpg')
     
     
