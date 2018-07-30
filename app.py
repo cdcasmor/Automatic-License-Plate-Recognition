@@ -12,10 +12,7 @@ app = Flask(__name__)
 #################################################
 
 UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__))
-#my_file = os.path.join(THIS_FOLDER, 'myfile.txt')
-#UPLOAD_FOLDER = os.path.join('..','uploads')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-#ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'png', 'gif'])
 
 @app.route("/")
 def welcome():
@@ -40,14 +37,13 @@ def demo():
 @app.route('/upload', methods=['POST'])
 def upload_file():
     file = request.files['image']
-    f = os.path.join(app.config['UPLOAD_FOLDER'], "in.jpg")
+    f = os.path.join(app.config['UPLOAD_FOLDER'], "plate.jpg")
     ff = os.path.join(app.config['UPLOAD_FOLDER'], "removeimgOriginalScene.png")
     if os.path.exists(f):
         os.remove(f)
     if os.path.exists(ff):
         os.remove(ff)
     file.save(f)
-#Main.main(f)
     return render_template('success.html')
 
 if __name__ == '__main__':
