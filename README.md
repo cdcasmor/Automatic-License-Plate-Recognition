@@ -17,7 +17,7 @@
 
 
 ![License Plate Detection](PlateDetect.png)
-<--!<p align="center"> <img src="https://github.com/yycyjqc/Automatic_Number_Plate_Recognition/blob/master/Image/vehicle-license-plates.png"> </p>-->
+
 
 
 <p align="center">
