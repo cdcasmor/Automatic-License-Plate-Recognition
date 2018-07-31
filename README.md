@@ -3,7 +3,7 @@
 ![built Using OpenCV](https://img.shields.io/badge/built%20using-OpenCV-brightgreen.svg)
 
 
-<h1 align="center"> Automatic Number Plate Recognition </h1>
+<h1 align="center"> Vehicle License Plate Recognition </h1>
 
 <div align="center">
 
