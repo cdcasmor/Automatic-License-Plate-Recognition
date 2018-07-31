@@ -46,7 +46,15 @@ The goal of this project is to showcase applied machine learning particularly im
 
 With the car and plate detection, we want to use the camera system instead, which most homes and apartments have installation already. 
 
-## Proposal
+## What is the Problem
+
+Use image detection and recognition through Deep Learning.
+
+Task (T): Recognized vehicle license plate if registered or unregistered to gain access in entering to a  premise.
+
+Experience (E): Detection and Recognition system.
+
+Performance (P): Classification accuracy, the number of car plates read correctly.
 
 ## Data Source
 
