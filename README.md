@@ -5,10 +5,6 @@
 
 <h1 align="center"> Automatic Number Plate Recognition </h1>
 
-<p align="center"> Using neural networks to build an automatic number plate recognition system. </p>
-
-
-
 <div align="center">
 
 </div>
