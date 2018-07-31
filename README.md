@@ -56,6 +56,11 @@ Experience (E): Detection and Recognition system.
 
 Performance (P): Classification accuracy, the number of car plates read correctly.
 
+## Motivation:
+The knowldge we gain through this project is our primary motivation as a means of learning exercise. We want to explore methods that we are not yet familiar with in order to learn new skills.
+
+Secondly, it will be a great solution and a good substitute of the tradional fob system to gain access. No-more hassle of bringing extra hardware kit that most of us can misplaced sometimes. 
+
 ## Data Source
 
 1. **```SUN397.tar.gz```**
