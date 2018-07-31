@@ -48,7 +48,7 @@ With the car and plate detection, we want to use the camera system instead, whic
 
 ## What is the Problem
 
-Use image detection and recognition through Deep Learning.
+Use of image detection and recognition using Deep Learning.
 
 Task (T): Recognized vehicle license plate if registered or unregistered to gain access in entering to a  premise.
 
