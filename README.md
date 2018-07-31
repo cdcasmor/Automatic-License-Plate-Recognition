@@ -12,20 +12,6 @@
 
 ![License Plate Detection](PlateDetect.png)
 
-
-
-<p align="center">
-  <a href="#members">Members</a> •
-  <a href="#background">Background</a> •
-  <a href="#proposal">Proposal</a> •
-  <a href="#data-source">Data Source</a> •
-  <a href="#process">Process</a> •
-  <a href="#findings">Findings</a> •
-  <a href="#limitations">Limitations</a> •
-  <a href="#technology-stack-used">Technology Stack Used</a> •
-<a href="#other">Other</a>
-</p>
-
 ## Members
 Welcome to the Automatic number-plate recognition project! We are team **Innovators**.
 
