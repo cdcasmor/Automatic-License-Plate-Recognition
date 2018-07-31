@@ -41,10 +41,25 @@ Reach us through LinkedIn:
 -   [Clifford Ferraren](https://www.linkedin.com/in/clifford-ferraren/)
 -   [Tsering Sherpa](https://www.linkedin.com/in/tsering-sherpa-1171a7b4/)
 
-## Background
-**Automatic number-plate recognition** (ANPR) is a technology that uses optical character recognition on images to read vehicle registration plates to create vehicle location data. It can use existing closed-circuit television, road-rule enforcement cameras, or cameras specifically designed for the task. 
+## Overview Of The Project
+The goal of this project is to showcase applied machine learning particularly image detection to solve ordinary problems. In these case, we want to use applied machine learning as car and plate detection that will  replace the use for fob, a small pocket device in opening door, gates and car garages. 
 
-## Proposal
+With the car and plate detection, we want to use the camera system instead, which most homes and apartments have installation already. 
+
+## What is the Problem
+
+Use of image detection and recognition using Deep Learning.
+
+Task (T): Recognized vehicle license plate if registered or unregistered to gain access in entering to a  premise.
+
+Experience (E): Detection and Recognition system.
+
+Performance (P): Classification accuracy, the number of car plates read correctly.
+
+## Motivation:
+The knowldge we gain through this project is our primary motivation as a means of learning exercise. We want to explore methods that we are not yet familiar with in order to learn new skills.
+
+Secondly, it will be a great solution and a good substitute of the tradional fob system to gain access. No-more hassle of bringing extra hardware kit that most of us can misplaced sometimes. 
 
 ## Data Source
 
