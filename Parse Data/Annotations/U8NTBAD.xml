@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>U8NTBAD.png</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/U8NTBAD.png</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>1280</width>
+    <height>960</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>592</xmin>
+        <ymin>501</ymin>
+        <xmax>749</xmax>
+        <ymax>583</ymax>
+    </bndbox>
+</object>
+</annotation>

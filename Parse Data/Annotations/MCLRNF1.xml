@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>MCLRNF1.png</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/MCLRNF1.png</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>1000</width>
+    <height>600</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>419</xmin>
+        <ymin>221</ymin>
+        <xmax>579</xmax>
+        <ymax>303</ymax>
+    </bndbox>
+</object>
+</annotation>

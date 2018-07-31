@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>ZG093PZ.jpg</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/ZG093PZ.jpg</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>640</width>
+    <height>480</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>185</xmin>
+        <ymin>282</ymin>
+        <xmax>446</xmax>
+        <ymax>343</ymax>
+    </bndbox>
+</object>
+</annotation>

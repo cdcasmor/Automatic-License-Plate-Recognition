@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>MH04ZZ0000.jpg</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/MH04ZZ0000.jpg</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>219</width>
+    <height>129</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>23</xmin>
+        <ymin>64</ymin>
+        <xmax>191</xmax>
+        <ymax>105</ymax>
+    </bndbox>
+</object>
+</annotation>

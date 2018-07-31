@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>YZP4923.jpg</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/YZP4923.jpg</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>800</width>
+    <height>600</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>325</xmin>
+        <ymin>403</ymin>
+        <xmax>466</xmax>
+        <ymax>449</ymax>
+    </bndbox>
+</object>
+</annotation>

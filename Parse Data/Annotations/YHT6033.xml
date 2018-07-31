@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>YHT6033.JPG</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/YHT6033.JPG</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>1792</width>
+    <height>1312</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>871</xmin>
+        <ymin>482</ymin>
+        <xmax>1257</xmax>
+        <ymax>631</ymax>
+    </bndbox>
+</object>
+</annotation>

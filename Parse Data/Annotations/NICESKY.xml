@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>NICESKY.png</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/NICESKY.png</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>896</width>
+    <height>592</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>375</xmin>
+        <ymin>245</ymin>
+        <xmax>573</xmax>
+        <ymax>346</ymax>
+    </bndbox>
+</object>
+</annotation>

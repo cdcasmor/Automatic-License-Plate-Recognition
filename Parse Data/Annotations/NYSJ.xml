@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<annotation>
+<folder>car_images_dataset</folder>
+<filename>NYSJ.png</filename>
+<path>/Users/rck/USC Data Analytics/plate detector/darkflow-master/car_images_dataset/NYSJ.png</path>
+<source>
+    <database>Unknown</database>
+</source>
+<size>
+    <width>1350</width>
+    <height>900</height>
+    <depth>3</depth>
+</size>
+
+<segmented>0</segmented>
+    <object>
+    <name>Vehicle Plate</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>543</xmin>
+        <ymin>447</ymin>
+        <xmax>816</xmax>
+        <ymax>581</ymax>
+    </bndbox>
+</object>
+</annotation>
