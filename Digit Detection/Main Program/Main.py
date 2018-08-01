@@ -95,13 +95,13 @@ def main(image):
         print("\nlicense plate read from ", image," :",licPlate.strChars,"\n")
         print("----------------------------------------")
 
-        if showSteps == True:
+        if showSteps == False:
             writeLicensePlateCharsOnImage(imgOriginalScene, licPlate)           # write license plate text on the image
 
             Image.fromarray(imgOriginalScene).show()                # re-show scene image
 
-            cv2.imwrite("imgOriginalScene.png", imgOriginalScene)           # write image out to file
-            input('Press any key to continue...')                    # hold windows open until user presses a key
+#cv2.imwrite("imgOriginalScene.png", imgOriginalScene)           # write image out to file
+#input('Press any key to continue...')                    # hold windows open until user presses a key
 
     return licPlate.strChars,licPlate.imgPlate
 ###################################################################################################
@@ -172,7 +172,7 @@ def writeLicensePlateCharsOnImage(imgOriginalScene, licPlate):
 
 if __name__ == "__main__":
     
-    i = 0
+    """i = 0
     length = 0
     score = 0
     start = time.time()
@@ -207,8 +207,8 @@ if __name__ == "__main__":
         i = i + 1
     print('time taken :',time.time() - start)
 
-    #print(result)
+    #print(result)"""
     
-    #main('Test_car_images_dataset\B58BPS.jpg')
+    main('plate.jpg')
     
     
